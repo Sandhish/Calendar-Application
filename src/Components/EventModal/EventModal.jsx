@@ -93,7 +93,6 @@ const EventModal = ({ date, events, onClose, onEditEvent }) => {
                     {event.location}
                   </div>
                 )}
-                <div className={styles.editHint}>Click to edit</div>
               </div>
             ))
           )}

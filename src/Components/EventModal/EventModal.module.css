@@ -118,19 +118,6 @@
   font-size: 0.9rem;
 }
 
-.editHint {
-  font-size: 0.75rem;
-  color: #9ca3af;
-  font-style: italic;
-  margin-top: 8px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.eventItem:hover .editHint {
-  opacity: 1;
-}
-
 @media (max-width: 768px) {
   .overlay {
     padding: 10px;

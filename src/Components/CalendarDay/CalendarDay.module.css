@@ -17,6 +17,14 @@
   z-index: 1;
 }
 
+.hasEvents {
+  cursor: pointer;
+}
+
+.hasEvents:hover {
+  background: #f0f9ff;
+}
+
 .otherMonth {
   background: #f9fafb;
   color: #9ca3af;
@@ -56,6 +64,12 @@
   justify-content: center;
   font-size: 10px;
   font-weight: bold;
+  margin-left: 6px;
+}
+
+.conflictIndicator:hover{
+  background: #dc2626;
+  transform: scale(1.1);
 }
 
 .events {
@@ -83,6 +97,13 @@
   text-overflow: ellipsis;
 }
 
+.eventTime {
+  font-size: 0.65rem;
+  opacity: 0.9;
+  display: block;
+  margin-top: 1px;
+}
+
 .moreEvents {
   font-size: 0.7rem;
   color: #6b7280;
@@ -96,48 +117,6 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 4px;
-}
-
-.addButton {
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-  color: #666;
-  opacity: 0;
-  transition: all 0.2s ease;
-}
-
-.day:hover .addButton {
-  opacity: 1;
-}
-
-.addButton:hover {
-  background: rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-}
-
-.today .addButton {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-}
-
-.today .addButton:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.eventTime {
-  font-size: 0.65rem;
-  opacity: 0.9;
-  display: block;
-  margin-top: 1px;
 }
 
 @media (max-width: 768px) {

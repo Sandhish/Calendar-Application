@@ -1,7 +1,7 @@
 import styles from "./CalendarGrid.module.css"
 import CalendarDay from "../CalendarDay/CalendarDay"
 
-const CalendarGrid = ({ currentDate, today, events, onDateClick, onCreateEvent, getEventsForDate }) => {
+const CalendarGrid = ({ currentDate, today, events, onDateClick, getEventsForDate }) => {
   const getDaysInMonth = (date) => {
     const year = date.getFullYear()
     const month = date.getMonth()
@@ -33,7 +33,7 @@ const CalendarGrid = ({ currentDate, today, events, onDateClick, onCreateEvent, 
       })
     }
 
-    const remainingCells = 42 - days.length 
+    const remainingCells = 42 - days.length
     for (let day = 1; day <= remainingCells; day++) {
       const nextMonthDate = new Date(year, month + 1, day)
       days.push({
@@ -52,9 +52,7 @@ const CalendarGrid = ({ currentDate, today, events, onDateClick, onCreateEvent, 
   return (
     <div className={styles.grid}>
       {days.map((dayInfo, index) => (
-        <CalendarDay key={index} dayInfo={dayInfo} onClick={() => onDateClick(dayInfo.date)}
-          onCreateEvent={() => onCreateEvent(dayInfo.date)}
-        />
+        <CalendarDay key={index} dayInfo={dayInfo} onClick={() => onDateClick(dayInfo.date)} />
       ))}
     </div>
   )
