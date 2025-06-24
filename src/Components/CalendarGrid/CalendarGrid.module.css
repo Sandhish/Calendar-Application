@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  min-height: 480px;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    min-height: 360px;
+  }
+}

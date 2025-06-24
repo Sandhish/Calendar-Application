@@ -1,0 +1,23 @@
+.calendarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.calendar {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  min-height: 600px;
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    border-radius: 12px;
+    margin: 0 10px;
+  }
+}

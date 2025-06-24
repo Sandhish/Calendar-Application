@@ -1,0 +1,158 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.eventsList {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.noEvents {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  margin: 40px 0;
+}
+
+.eventItem {
+  border-left: 4px solid #3b82f6;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: #f8fafc;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.eventItem:hover {
+  background: #f1f5f9;
+  transform: translateX(4px);
+}
+
+.eventItem:last-child {
+  margin-bottom: 0;
+}
+
+.eventHeader {
+  margin-bottom: 8px;
+}
+
+.eventTitle {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.eventTime {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.eventDescription {
+  margin: 8px 0 0 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.eventLocation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.editHint {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-style: italic;
+  margin-top: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.eventItem:hover .editHint {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 10px;
+  }
+
+  .modal {
+    max-height: 90vh;
+  }
+
+  .header {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .eventsList {
+    padding: 16px;
+  }
+
+  .eventItem {
+    padding: 12px;
+  }
+}

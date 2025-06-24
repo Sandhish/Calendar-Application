@@ -1,0 +1,161 @@
+.day {
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.day:hover {
+  background: #f8fafc;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.otherMonth {
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+.otherMonth:hover {
+  background: #f3f4f6;
+}
+
+.today {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: bold;
+}
+
+.today:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.dayNumber {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.conflictIndicator {
+  background: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.events {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.event {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.eventTitle {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.moreEvents {
+  font-size: 0.7rem;
+  color: #6b7280;
+  font-weight: 500;
+  padding: 2px 4px;
+  text-align: center;
+}
+
+.dayHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.addButton {
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.day:hover .addButton {
+  opacity: 1;
+}
+
+.addButton:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.today .addButton {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.today .addButton:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.eventTime {
+  font-size: 0.65rem;
+  opacity: 0.9;
+  display: block;
+  margin-top: 1px;
+}
+
+@media (max-width: 768px) {
+  .day {
+    padding: 4px;
+    min-height: 60px;
+  }
+
+  .dayNumber {
+    font-size: 0.9rem;
+  }
+
+  .event {
+    font-size: 0.7rem;
+    padding: 1px 4px;
+  }
+
+  .moreEvents {
+    font-size: 0.65rem;
+  }
+}

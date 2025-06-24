@@ -1,0 +1,100 @@
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.navButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.monthYear {
+  text-align: center;
+}
+
+.monthYearButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  color: inherit;
+}
+
+.monthYearButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.monthTitle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.yearTitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.weekDay {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 12px 8px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 16px;
+  }
+
+  .monthTitle {
+    font-size: 1.5rem;
+  }
+
+  .yearTitle {
+    font-size: 1rem;
+  }
+
+  .navButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .weekDay {
+    font-size: 0.8rem;
+    padding: 8px 4px;
+  }
+}
